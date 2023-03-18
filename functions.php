@@ -33,3 +33,17 @@ function my_increase_price_terms( $price ){
 }
 
 
+/**
+ * You can even have some fun
+ *
+*/
+// Random price
+add_filter( 'woocommerce_product_get_price', 'my_random_price', 10, 2 );
+
+function my_random_price( $price ){
+
+  $price = rand(1, 99); // random number between 1 and 99
+  return $price; 
+
+}
+
